@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — TickTrack</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.75;
+      padding: 0 16px 80px;
+    }
+
+    /* ── Header ────────────────────────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 60%, #2563eb 100%);
+      margin: 0 -16px;
+      padding: 56px 32px 48px;
+      text-align: center;
+    }
+    header .app-icon {
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    header p {
+      margin-top: 8px;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+    }
+
+    /* ── Layout ─────────────────────────────────────────────────────────── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    /* ── Sections ───────────────────────────────────────────────────────── */
+    section {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    h2 .icon {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    h2 .icon.blue   { background: rgba(37,99,235,0.25);  }
+    h2 .icon.green  { background: rgba(34,197,94,0.25);  }
+    h2 .icon.orange { background: rgba(249,115,22,0.25); }
+    h2 .icon.purple { background: rgba(139,92,246,0.25); }
+    h2 .icon.teal   { background: rgba(20,184,166,0.25); }
+    h2 .icon.red    { background: rgba(239,68,68,0.25);  }
+    h2 .icon.slate  { background: rgba(100,116,139,0.25);}
+
+    p { color: #cbd5e1; margin-bottom: 12px; font-size: 0.95rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    li { margin-bottom: 8px; }
+    li:last-child { margin-bottom: 0; }
+
+    /* ── Data table ─────────────────────────────────────────────────────── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+    .data-table th {
+      text-align: left;
+      padding: 10px 14px;
+      background: #0f172a;
+      color: #94a3b8;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .data-table td {
+      padding: 10px 14px;
+      border-top: 1px solid #334155;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    /* ── Permission chips ────────────────────────────────────────────────── */
+    .permission-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .permission-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .perm-name {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 0.78rem;
+      color: #60a5fa;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .perm-desc { font-size: 0.9rem; color: #94a3b8; }
+
+    /* ── Highlight box ───────────────────────────────────────────────────── */
+    .highlight {
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.25);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      color: #86efac;
+      font-size: 0.9rem;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .highlight.orange {
+      background: rgba(249,115,22,0.08);
+      border-color: rgba(249,115,22,0.25);
+      color: #fdba74;
+    }
+
+    /* ── Third-party card ────────────────────────────────────────────────── */
+    .third-party {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .third-party-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(66,133,244,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .third-party h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-bottom: 4px;
+    }
+    .third-party p { font-size: 0.88rem; margin-bottom: 4px; }
+    .third-party a { color: #60a5fa; text-decoration: none; font-size: 0.85rem; }
+    .third-party a:hover { text-decoration: underline; }
+
+    /* ── Contact box ─────────────────────────────────────────────────────── */
+    .contact-box {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-top: 12px;
+    }
+    .contact-box p { margin-bottom: 6px; }
+    .contact-box a { color: #60a5fa; text-decoration: none; }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      color: #475569;
+      font-size: 0.82rem;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid #1e293b;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 40px 20px 36px; }
+      section { padding: 22px 20px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">⏱</div>
+  <h1>Privacy Policy</h1>
+  <p>TickTrack — Work Time Tracker</p>
+</header>
+
+<div class="container">
+
+  <p class="badge">Last updated: May 20, 2026</p>
+
+  <!-- 1. Overview -->
+  <section>
+    <h2><span class="icon blue">👋</span> Overview</h2>
+    <p>
+      TickTrack ("the app", "we", "our") is a work-time tracking application
+      developed and maintained by <strong>Deval Sathwara</strong> ("the
+      developer"). This privacy policy explains what information the app
+      collects, how it is used, and your rights regarding that information.
+    </p>
+    <div class="highlight">
+      ✅ &nbsp;<strong>Short version:</strong> TickTrack stores all your
+      work-session data locally on your device. We do not operate any
+      developer-owned server, we do not sell your data, and we do not track you
+      for advertising purposes.
+    </div>
+    <p>
+      By using TickTrack, you agree to the practices described in this policy.
+    </p>
+  </section>
+
+  <!-- 2. Data collected -->
+  <section>
+    <h2><span class="icon teal">📋</span> Information We Collect</h2>
+    <p>
+      TickTrack collects only the information you actively create within the
+      app. All of it stays on your device unless you choose to export it.
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>What it includes</th>
+          <th>Where it's stored</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Work sessions</strong></td>
+          <td>Check-in time, check-out time, break start/end times, work duration, gap periods</td>
+          <td>On-device (Hive database)</td>
+        </tr>
+        <tr>
+          <td><strong>Session notes</strong></td>
+          <td>Short text notes you add to a session (max 120 characters each)</td>
+          <td>On-device (Hive database)</td>
+        </tr>
+        <tr>
+          <td><strong>App settings</strong></td>
+          <td>Theme preference, accent colour, notification toggles, daily work-hour goal, week-off days</td>
+          <td>On-device (Hive database)</td>
+        </tr>
+        <tr>
+          <td><strong>Notification state</strong></td>
+          <td>Whether you are checked in today, last check-in time, last check-out date — used only to decide when to fire reminders</td>
+          <td>On-device (SharedPreferences)</td>
+        </tr>
+        <tr>
+          <td><strong>FCM device token</strong></td>
+          <td>An anonymous device identifier generated by Google Firebase, used to deliver push notifications to your device</td>
+          <td>Google's servers (see Third-Party Services below). The developer does not store or process this token.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:16px;">
+      We do <strong>not</strong> collect: your name, email address, phone
+      number, location, contacts, photos, camera, microphone input, or any
+      other personal identifiers.
+    </p>
+  </section>
+
+  <!-- 3. How we use data -->
+  <section>
+    <h2><span class="icon green">⚙️</span> How We Use Your Information</h2>
+    <ul>
+      <li>
+        <strong>Work sessions &amp; notes</strong> — displayed to you in the
+        History and Statistics screens. Never transmitted anywhere.
+      </li>
+      <li>
+        <strong>Notification state</strong> — read by a background task
+        (Android WorkManager) running entirely on your device to decide whether
+        to show a check-in reminder, wrap-up alert, or work-complete
+        notification. No data leaves your device for this purpose.
+      </li>
+      <li>
+        <strong>FCM device token</strong> — used only by Google Firebase to
+        route push notifications to your specific device. The developer has no
+        access to a backend server and does not read, log, or act upon this
+        token beyond what Firebase handles automatically.
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4. Data sharing -->
+  <section>
+    <h2><span class="icon orange">🔒</span> Data Sharing &amp; Disclosure</h2>
+    <div class="highlight">
+      ✅ &nbsp;We do <strong>not</strong> sell, rent, trade, or share your
+      personal data with any third party for marketing or commercial purposes.
+    </div>
+    <p>
+      The only third-party involvement is Google Firebase (described below),
+      which processes an anonymous device token solely for push notification
+      delivery. No user-created content (sessions, notes, settings) ever
+      leaves your device unless <em>you</em> choose to export it via the CSV
+      export feature and share it yourself.
+    </p>
+    <p>
+      We may disclose information if required to do so by law or in response
+      to a valid legal request. In practice, because we do not collect or
+      store any personal data on our own servers, there is nothing to disclose.
+    </p>
+  </section>
+
+  <!-- 5. Third-party services -->
+  <section>
+    <h2><span class="icon purple">🔗</span> Third-Party Services</h2>
+    <p>
+      TickTrack integrates one external service. Its own privacy policy governs
+      how it handles data:
+    </p>
+    <div class="third-party">
+      <div class="third-party-icon">🔥</div>
+      <div>
+        <h3>Google Firebase (Firebase Core + Firebase Cloud Messaging)</h3>
+        <p>
+          Used to deliver optional push notifications to your device. Firebase
+          Cloud Messaging (FCM) assigns an anonymous device token to your
+          installation. This token is handled entirely by Google — the
+          developer does not receive, store, or process it on any backend
+          server.
+        </p>
+        <p>
+          Firebase may collect device diagnostic information according to
+          Google's own policies.
+        </p>
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">
+          → Google Firebase Privacy Policy
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+          → Google Privacy Policy
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Permissions -->
+  <section>
+    <h2><span class="icon slate">🛡️</span> Android Permissions</h2>
+    <p>
+      TickTrack requests the following Android permissions. None of them are
+      used to collect personal data.
+    </p>
+    <div class="permission-list">
+      <div class="permission-item">
+        <span class="perm-name">POST_NOTIFICATIONS</span>
+        <span class="perm-desc">Allows the app to show check-in reminders, wrap-up alerts, and work-complete notifications. You can revoke this at any time in Android Settings.</span>
+      </div>
+      <div class="permission-item">
+        <span class="perm-name">SCHEDULE_EXACT_ALARM<br/>USE_EXACT_ALARM</span>
+        <span class="perm-desc">Required to fire reminder notifications at the precise scheduled time (e.g. your average check-in time).</span>
+      </div>
+      <div class="permission-item">
+        <span class="perm-name">RECEIVE_BOOT_COMPLETED</span>
+        <span class="perm-desc">Allows the background WorkManager task to restart after the device reboots so scheduled reminders continue to work.</span>
+      </div>
+      <div class="permission-item">
+        <span class="perm-name">VIBRATE</span>
+        <span class="perm-desc">Enables vibration when a notification is delivered.</span>
+      </div>
+      <div class="permission-item">
+        <span class="perm-name">USE_FULL_SCREEN_INTENT</span>
+        <span class="perm-desc">Allows reminder notifications to appear prominently on the lock screen (Android 14+).</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Data storage & retention -->
+  <section>
+    <h2><span class="icon blue">💾</span> Data Storage &amp; Retention</h2>
+    <p>
+      All work sessions, notes, and settings are stored exclusively in an
+      on-device database (Hive) and in Android SharedPreferences. No data is
+      uploaded to the internet by the app itself.
+    </p>
+    <p>
+      Your data persists as long as the app is installed. When you uninstall
+      TickTrack, Android removes all associated app data, including the Hive
+      database. You can also manually export your sessions as a CSV file before
+      uninstalling if you want to keep a copy.
+    </p>
+    <div class="highlight orange">
+      ⚠️ &nbsp;If you use Android's built-in backup feature (Google One
+      Backup), app data may be backed up to your Google account according to
+      Google's own backup and privacy policies.
+    </div>
+  </section>
+
+  <!-- 8. CSV export -->
+  <section>
+    <h2><span class="icon teal">📤</span> CSV Export &amp; Import</h2>
+    <p>
+      TickTrack lets you export your session history as a CSV file and share it
+      via any app you choose (e.g. email, cloud storage). Once you share the
+      file, it leaves the app's control and is handled according to the privacy
+      policy of the app or service you shared it with.
+    </p>
+    <p>
+      Imported CSV files are processed locally on your device and are not
+      transmitted anywhere.
+    </p>
+  </section>
+
+  <!-- 9. Children's privacy -->
+  <section>
+    <h2><span class="icon red">👶</span> Children's Privacy</h2>
+    <p>
+      TickTrack is designed for adults and working professionals. It is not
+      directed at children under the age of 13 (or the applicable age of
+      digital consent in your jurisdiction). We do not knowingly collect
+      personal information from children. If you believe a child has provided
+      data through the app, please contact us and we will take appropriate
+      action.
+    </p>
+  </section>
+
+  <!-- 10. Security -->
+  <section>
+    <h2><span class="icon green">🔐</span> Security</h2>
+    <p>
+      Because all data is stored locally on your device, its security depends
+      primarily on the security of your device itself. We recommend using a
+      screen lock and keeping your Android OS up to date.
+    </p>
+    <p>
+      The app does not transmit session data over the network, so there is no
+      risk of interception of your work records in transit.
+    </p>
+  </section>
+
+  <!-- 11. Changes -->
+  <section>
+    <h2><span class="icon orange">🔄</span> Changes to This Policy</h2>
+    <p>
+      We may update this privacy policy from time to time. When we do, the
+      "Last updated" date at the top of this page will be revised. For
+      significant changes, we will make reasonable efforts to notify you (for
+      example, via an in-app notice or a Play Store update description).
+    </p>
+    <p>
+      Continued use of TickTrack after a policy update constitutes your
+      acceptance of the revised policy.
+    </p>
+  </section>
+
+  <!-- 12. Contact -->
+  <section>
+    <h2><span class="icon purple">✉️</span> Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests regarding this privacy
+      policy or the handling of your data, please reach out:
+    </p>
+    <div class="contact-box">
+      <p><strong>Developer:</strong> Deval Sathwara</p>
+      <p><strong>App:</strong> TickTrack — Work Time Tracker</p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:sathwaradeval32@gmail.com">sathwaradeval32@gmail.com</a>
+      </p>
+    </div>
+    <p style="margin-top:14px;">
+      We aim to respond to all privacy-related enquiries within 7 business days.
+    </p>
+  </section>
+
+</div><!-- /container -->
+
+<footer>
+  <p>© 2026 Deval Sathwara. All rights reserved.</p>
+  <p style="margin-top:6px;">TickTrack — Work Time Tracker</p>
+</footer>
+
+</body>
+</html>
